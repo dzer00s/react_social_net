@@ -12,8 +12,8 @@
 .app-wrapper-content {
 
     grid-area: c;
-    background-color: blueviolet;
-    color: chartreuse;
+    background-color: #919390;
+    color: #f4f0f4;
 }
 .app-wrapper-content img {
   width: 85%;
