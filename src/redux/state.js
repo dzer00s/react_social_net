@@ -19,6 +19,13 @@ let state = {
             { id: 3, message: 'make pizza' },
             { id: 4, message: 'great' }
         ]
+    },
+    SideBar: {
+        SideBarData: [
+            { name: 'Eugene' },
+            { name: 'Egor' },
+            { name: 'Maxim' }
+        ],
     }
 }
 
