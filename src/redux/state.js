@@ -20,7 +20,8 @@ let state = {
             { id: 2, message: 'what do you do?' },
             { id: 3, message: 'make pizza' },
             { id: 4, message: 'great' }
-        ]
+        ],
+        newMessageText: 'hr'
     },
     SideBar: {
         SideBarData: [
@@ -48,5 +49,23 @@ export let updateNewPostText = (newText) => {
     state.ProfilePage.newPostText = newText;
     rerenderEntireTree(state);
 }
+
+//////////////////////////////////////////////////////////////
+export let addMessage = () => {
+    let newMessage = {
+        id: 5,
+        message: state.DialogsPage.newMessageText
+    };
+
+    state.DialogsPage.messagesData.push(newMessage);
+    state.DialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+
+export let updateNewMessageText = (newMessage) => {
+    state.DialogsPage.newMessageText = newMessage;
+    rerenderEntireTree(state);
+}
+
 
 export default state;
