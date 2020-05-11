@@ -15,8 +15,8 @@ const MyPosts = (props) => {
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = { type: 'UPDATE-NEW-POST-TEXT', newText: text };
-    props.dispatch(action);
+    let actionPost = { type: 'UPDATE-NEW-POST-TEXT', newText: text };
+    props.dispatch(actionPost);
   }
 
   return (<div className={s.postsBlock}>
