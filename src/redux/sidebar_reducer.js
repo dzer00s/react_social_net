@@ -1,4 +1,12 @@
-const sidebarReducer = (state, action) => {
+let initialState = {
+        SideBarData: [
+            { name: 'Eugene' },
+            { name: 'Egor' },
+            { name: 'Maxim' }
+        ],
+};
+
+const sidebarReducer = (state = initialState, action) => {
 
     return state;
 }
