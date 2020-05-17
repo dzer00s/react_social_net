@@ -8,6 +8,7 @@ import Dialogs from './Components/Dialogs/Dialogs';
 import { Route, BrowserRouter } from 'react-router-dom';
 import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings';
+import DialogsContainer from './Components/Dialogs/DialogsContainer';
 
 const App = (props) => {
   return (
@@ -18,13 +19,11 @@ const App = (props) => {
 
         <Route path='/profile'
           render={() => <Profile
-            ProfilePage={props.state.ProfilePage}
-            dispatch={props.dispatch} />} />
+            store={props.store} />} />
 
         <Route path='/dialogs'
-          render={() => <Dialogs
-            DialogsPage={props.state.DialogsPage}
-            dispatch={props.dispatch} />} />
+          render={() => <DialogsContainer
+            store={props.store} />} />
 
 
         <Route path='/music' render={() => <Music />} />
