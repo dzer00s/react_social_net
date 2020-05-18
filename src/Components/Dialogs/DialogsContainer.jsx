@@ -1,31 +1,32 @@
 import React from 'react';
 import s from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
-import Message from './Message/Message';
-import DialogItem from './dialogitem/DialogItem';
+// import { NavLink } from 'react-router-dom';
+// import DialogItem from './dialogitem/DialogItem';
 import { updateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialogs_reducer';
 import Dialogs from './Dialogs';
+import StoreContext from '../../StoreContext';
 
 
-const DialogsContainer = (props) => {
+const DialogsContainer = () => {
 
-    let state = props.store.getState().DialogsPage;
+    return <StoreContext.Consumer>
+        {store => {
+            let state = store.getState().DialogsPage;
 
+            let addMessage = () => {
+                store.dispatch(addMessageActionCreator());
+            }
 
-    let addMessage = () => {
-        props.store.dispatch(addMessageActionCreator());
-    }
+            let onMessageChange = (text) => {
+                store.dispatch(updateNewMessageTextActionCreator(text));
+            }
 
-    let onMessageChange = (text) => {
-        props.store.dispatch(updateNewMessageTextActionCreator(text));
-    }
-
-
-    return (<Dialogs
-        updateNewMessageText={onMessageChange}
-        sendMessage={addMessage}
-        DialogsPage={state} />
-    )
+            return <Dialogs
+                updateNewMessageText={onMessageChange}
+                sendMessage={addMessage}
+                DialogsPage={store.getState().DialogsPage} />
+        }
+        }
+    </StoreContext.Consumer>
 }
-
 export default DialogsContainer;
