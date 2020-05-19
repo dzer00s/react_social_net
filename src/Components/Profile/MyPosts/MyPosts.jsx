@@ -12,15 +12,12 @@ const MyPosts = (props) => {
 
   let onAddPost = () => {
     props.addPost();
-    // props.dispatch(addPostActionCreator());
-
   }
 
   let onPostChange = () => {
+    debugger
     let text = newPostElement.current.value;
     props.updateNewPostText(text);
-    // let actionPost = updateNewPostTextActionCreator(text);
-    // props.dispatch(actionPost);
   }
 
   return (<div className={s.postsBlock}>
