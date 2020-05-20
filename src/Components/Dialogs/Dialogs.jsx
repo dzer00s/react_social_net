@@ -3,7 +3,7 @@ import s from './Dialogs.module.css';
 import { NavLink } from 'react-router-dom';
 import Message from './Message/Message';
 import DialogItem from './dialogitem/DialogItem';
-import { updateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialogs_reducer';
+// import { updateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialogs_reducer';
 
 
 const Dialogs = (props) => {
@@ -16,7 +16,7 @@ const Dialogs = (props) => {
 
     let newMessageElement = React.createRef();
 
-    let addMessage = () => {
+    let onSendMessage = () => {
         props.sendMessage();
     }
 
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
                 <center>text me now</center>
                 <textarea onChange={onMessageChange} value={props.DialogsPage.newMessageText} ref={newMessageElement} />
                 <br />
-                <button onClick={addMessage}>send message</button>
+                <button onClick={onSendMessage}>send message</button>
             </div>
         </div>
     )
