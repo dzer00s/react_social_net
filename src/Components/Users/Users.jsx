@@ -6,14 +6,22 @@ import userPhoto from '../../assets/images/icon_user.png';
 
 
 let Users = (props) => {
-    if (props.users.length === 0) {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            debugger;
-            props.set_users(response.data.items) 
-        });
+
+    let Get_Users = () => {
+        if (props.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+                debugger;
+                props.set_users(response.data.items)
+            });
+        }
     }
+
+
+
     return <div>
+          <button onClick={Get_Users}>Get Users ?</button>
         {
+            
             props.users.map(u => <div key={u.id}>
                 <div>
                     <div className={s.userPhoto}>
