@@ -5,18 +5,30 @@ import userPhoto from '../../assets/images/icon_user.png';
 
 
 
-class Users extends React.Component {
+class UsersC extends React.Component {
     componentDidMount() {
         axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            debugger;
             this.props.set_users(response.data.items);
-        })
-};
+        });
+    }
+
 
     render() {
+
+        let pagesCount = this.props.totalUsersCount / this.props.pageSize;
+        let pages = [];
+        for (let i = 1; i <= pagesCount; i++) {
+            pages.push(i);
+        }
         return <div>
+            <div>
+                {pages.map(p => {
+                    return <span className={this.props.currentPage === p && s.selectedPage}>{p} </span>
+                })}
+            </div>
             {
                 this.props.users.map(u => <div key={u.id}>
+
                     <div>
                         <div className={s.userPhoto}>
                             <img className={s.userPhotoborder} src={u.photos.small != null ? u.photos.small : userPhoto} alt="" />
@@ -53,4 +65,4 @@ class Users extends React.Component {
 
 
 
-export default Users;
+export default UsersC;
