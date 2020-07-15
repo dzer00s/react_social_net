@@ -1,5 +1,6 @@
 .postsBlock {
     padding: 10px;
+    flex-basis: 200px;
 }
 .posts {
     margin-top: 10px;

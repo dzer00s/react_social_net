@@ -4,4 +4,31 @@
 .avatar {
     width: 150px;
     height: 150px;
+    flex-basis: 250px;  
+}
+.avatar img {
+  border-radius: 0;
+  box-shadow:  -15px -15px 0 -5px rgba(65, 37, 35, 0.6),
+               15px -15px 0 -5px rgba(65, 37, 105, 0.6),
+              15px 15px 0 -5px rgba(35, 47, 35, 0.6),
+              -15px 15px 0 -5px rgba(35, 47, 105, 0.6);
+}
+.profileInfoMain {
+    flex-basis: 250px;
+}
+.profileInfo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.profileInfoList {
+    display: inline-block;
+}
+.profileInfoItem {
+    flex-basis: 250px;  
+    height: 150px;
+    font-size: 18px;
+}
+.profileInfoItemEl1 {
+    font-size: 26px;
 }

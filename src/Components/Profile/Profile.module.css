@@ -1,0 +1,7 @@
+.profileMain {
+    margin: 25px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

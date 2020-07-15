@@ -6,11 +6,14 @@ const ProfileInfo = (props) => {
   if (!props.profile) {
     return <Preloader />
   }
-  debugger;
-  return (<div>
-    <div className={s.descriptionblock}>
+  return (<div className={s.profileInfoMain}>
+    <div className={s.profileInfo}>
       <div className={s.avatar} >
-        <img src={props.profile.photos.large} />
+        <img src={props.profile.photos.large} className={s.avatarImg} />
+      </div>
+      <div className={s.profileInfoItem}>
+        <p className={s.profileInfoItemEl1}>{props.profile.fullName}</p>
+        <p>Обо мне:</p> <p>{props.profile.aboutMe}</p>
       </div>
     </div>
   </div>)

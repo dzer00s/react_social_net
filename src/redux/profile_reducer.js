@@ -4,8 +4,8 @@ const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [
-        { id: 1, message: 'your photo amazing', like: '10' },
-        { id: 2, message: 'thx Marie', like: '2' }
+        { id: 1, message: 'i will be King!', like: '10' },
+        { id: 2, message: 'politics evil', like: '2' }
     ],
     newPostText: 'kama.com',
     profile: null
