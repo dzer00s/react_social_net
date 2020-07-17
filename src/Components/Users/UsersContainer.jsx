@@ -19,7 +19,9 @@ class UsersAPIComponent extends React.Component {
     onChanged = (pageNumber) => {
         this.props.toggleIsFetching(true);
         this.props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`, {
+            withCredentials: true
+        })
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
@@ -32,8 +34,8 @@ class UsersAPIComponent extends React.Component {
             <Users totalUsersCount={this.props.totalUsersCount}
                 pageSize={this.props.pageSize}
                 currentPage={this.props.currentPage}
-                follow={this.props.follow}
-                unfollow={this.props.unfollow}
+                setFollow={this.props.setFollow}
+                setUnfollow={this.props.setUnfollow}
                 onChanged={this.onChanged}
                 users={this.props.users}
                 isFetching={this.props.isFetching} />

@@ -1,19 +1,23 @@
 .header {
-    grid-area: h;
-    background-color: #1e231d;
-  }
-  .img_icon {
-    margin-left: 15px;
-  }
-  .header img {
-    width: 60px;
-    height: 60px;
-  }
-  .login {
-    float: right;
-    color: white;
-    margin: 15px;
-  }
-  .login a {
-  color:white ;
- }
+  grid-area: h;
+  background-color: #1e231d;
+}
+
+.img_icon {
+  margin-left: 15px;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+}
+
+.login {
+  float: right;
+  color: white;
+  margin: 15px;
+}
+
+.login a {
+  color: white;
+}
