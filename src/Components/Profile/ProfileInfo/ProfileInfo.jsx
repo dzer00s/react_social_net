@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
+import userPhoto from '../../../assets/images/icon_user.png';
 import Preloader from '../../Features/Preloader/Preloader';
 
 const ProfileInfo = (props) => {
@@ -9,7 +10,7 @@ const ProfileInfo = (props) => {
   return (<div className={s.profileInfoMain}>
     <div className={s.profileInfo}>
       <div className={s.avatar} >
-        <img src={props.profile.photos.large} className={s.avatarImg} />
+        <img src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto  } className={s.avatarImg} />
       </div>
       <div className={s.profileInfoItem}>
         <p className={s.profileInfoItemEl1}>{props.profile.fullName}</p>
