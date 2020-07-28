@@ -26,7 +26,6 @@ class UsersAPIComponent extends React.Component {
                 onChanged={this.onChanged}
                 users={this.props.users}
                 isFetching={this.props.isFetching}
-                toggleIsFollowingProgress={this.props.toggleIsFollowingProgress}
                 followingInProgress={this.props.followingInProgress} />
         </>
     }
@@ -70,5 +69,5 @@ let mapStateToProps = (state) => {
 export default connect(mapStateToProps,
     {
         setFollow, setUnfollow,
-        setCurrentPage, toggleIsFollowingProgress, getUsersThunkCreator
+        setCurrentPage, getUsersThunkCreator
     })(UsersAPIComponent);
