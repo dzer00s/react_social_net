@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
+        userId = this.props.userId;
         this.props.getProfileThunkCreator(userId);
     }
     render() {
@@ -18,7 +19,8 @@ class ProfileContainer extends React.Component {
 
 let mapStateToProps = (state) => ({
     profile: state.ProfilePage.profile,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    userId: state.auth.id
 });
 
 let withUrlDataContainerComponent = withRouter(ProfileContainer);

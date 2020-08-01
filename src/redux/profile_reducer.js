@@ -42,7 +42,7 @@ export const setUsersProfile = (profile) => ({ type: SET_USER_PROFILE, profile }
 export const getProfileThunkCreator = (userId) => {
     return (dispatch) => {
         // let userId = this.props.match.params.userId;
-        if (!userId) { userId = 24; }
+        // if (!userId) { userId = 24; }
         profileAPI.getProfile(userId)
             .then(data => {
                 dispatch(setUsersProfile(data));
