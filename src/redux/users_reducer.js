@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils";
 import { usersAPI } from '../api/api';
 
 const FOLLOW = 'FOLLOW';
@@ -67,7 +66,7 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 followingInProgress: action.isFetching
                     ? [...state.followingInProgress, action.userId]
-                    : state.followingInProgress.filter(id => id != action.userId)
+                    : state.followingInProgress.filter(id => id !== action.userId)
             }
         }
         default:
@@ -100,7 +99,7 @@ export const setFollow = (userId) => {
         dispatch(toggleIsFollowingProgress(true, userId));
         usersAPI.setFollow(userId)
             .then(response => {
-                if (response.data.resultCode == 0) {
+                if (response.data.resultCode === 0) {
                     dispatch(setFollowSuccess(userId));
                 }
                 dispatch(toggleIsFollowingProgress(false, userId));
@@ -113,7 +112,7 @@ export const setUnfollow = (userId) => {
         dispatch(toggleIsFollowingProgress(true, userId));
         usersAPI.setUnfollow(userId)
             .then(response => {
-                if (response.data.resultCode == 0) {
+                if (response.data.resultCode === 0) {
                     dispatch(setUnfollowSuccess(userId));
                 }
                 dispatch(toggleIsFollowingProgress(false, userId));

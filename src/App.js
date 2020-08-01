@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/Navbar/Nav';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Settings from './Components/Settings/Settings';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from './Components/Users/UsersContainer';

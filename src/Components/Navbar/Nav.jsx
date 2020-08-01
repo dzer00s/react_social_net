@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Nav.module.css';
 import { NavLink } from 'react-router-dom';
-const NavBar = (props) => {
 
+const NavBar = (props) => {
 
   return (<div className={s.navBar}>
     <nav className={s.nav}>
@@ -25,19 +25,19 @@ const NavBar = (props) => {
       <div className={s.listFriends}>
         <ul>
           <li className={s.itemfriend}>
-            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="#" />
+            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="Linus-Torvalds" />
             <br />
             <a href="#">{props.state.SideBarData[0].name}</a>
           </li>
 
           <li className={s.itemfriend}>
-            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="#" />
+            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="Linus-Torvalds" />
             <br />
             <a href="#">{props.state.SideBarData[1].name}</a>
           </li>
 
           <li className={s.itemfriend}>
-            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="#" />
+            <img className={s.imgfriend} src="http://www.isaacson.info/wp-content/uploads/2018/10/Linus-Torvalds.jpg" alt="Linus-Torvalds" />
             <br />
             <a href="#">{props.state.SideBarData[2].name}</a>
           </li>

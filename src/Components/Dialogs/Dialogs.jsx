@@ -1,14 +1,11 @@
 import React from 'react';
 import s from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
 import Message from './Message/Message';
 import DialogItem from './dialogitem/DialogItem';
 // import { updateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialogs_reducer';
 
 
 const Dialogs = (props) => {
-
-    let state = props.DialogsPage;
 
     let dialogsElements = props.DialogsPage.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />);
 

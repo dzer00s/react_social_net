@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as axios from 'axios';
 import Users from './Users';
-import { setFollow, setUnfollow, setCurrentPage, toggleIsFollowingProgress, getUsersThunkCreator } from '../../redux/users_reducer';
+import { setFollow, setUnfollow, setCurrentPage, getUsersThunkCreator } from '../../redux/users_reducer';
 import Preloader from '../Features/Preloader/Preloader';
-import { usersAPI } from '../../api/api';
 
 class UsersAPIComponent extends React.Component {
     componentDidMount() {
