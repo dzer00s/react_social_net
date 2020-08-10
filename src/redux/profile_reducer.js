@@ -65,6 +65,15 @@ export const getStatusThunkCreator = (userId) => {
             });
     }
 }
-
+export const updateStatusThunkCreator = (status) => (dispatch) => {
+    // let userId = this.props.match.params.userId;
+    // if (!userId) { userId = 24; }
+    profileAPI.updateStatus(status)
+        .then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(setStatus(status));
+            }
+        });
+}
 
 export default profileReducer;
