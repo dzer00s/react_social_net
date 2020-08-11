@@ -7,7 +7,7 @@ import s from './Profile.module.css';
 const Profile = (props) => {
   return (
     <div className={s.profileMain}>
-      <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
+      <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatusThunkCreator} />
       <MyPostsContainer />
     </div>
   )
