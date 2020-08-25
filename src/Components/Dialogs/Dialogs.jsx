@@ -4,8 +4,6 @@ import Message from './Message/Message';
 import DialogItem from './dialogitem/DialogItem';
 import { Redirect } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
-// import { updateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialogs_reducer';
-
 
 const Dialogs = (props) => {
 
