@@ -26,6 +26,9 @@ const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 const Login = (props) => {
     const onSubmit = (formData) => {
         console.log(formData)
+        // dispatch thunk
+        // login подцепить к стору
+        
     }
     return <div>
         <h1 >You must be Loggined</h1>
